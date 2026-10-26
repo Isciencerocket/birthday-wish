@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="subtitle">A little surprise for you</p>
+      <h1>Happy Birthday, [Her Name]!</h1>
+      <button class="btn" id="celebrate-btn">Click to Celebrate 🎉</button>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="moments">
+    <h2>Our Moments</h2>
+    <div class="gallery">
+
+      <div class="polaroid" onclick="openModal('images/photo1.jpg', 'Caption 1')">
+        <div class="tape"></div>
+        <img src="images/photo1.jpg" alt="Memory 1">
+        <p class="caption">Caption 1</p>
+      </div>
+
+      <div class="polaroid" onclick="openModal('images/photo2.jpg', 'Caption 2')">
+        <div class="tape"></div>
+        <img src="images/photo2.jpg" alt="Memory 2">
+        <p class="caption">Caption 2</p>
+      </div>
+
+      <div class="polaroid" onclick="openModal('images/photo3.jpg', 'Caption 3')">
+        <div class="tape"></div>
+        <img src="images/photo3.jpg" alt="Memory 3">
+        <p class="caption">Caption 3</p>
+      </div>
+
+      <div class="polaroid" onclick="openModal('images/photo4.jpg', 'Caption 4')">
+        <div class="tape"></div>
+        <img src="images/photo7.jpg" alt="Memory 4">
+        <p class="caption">Caption 4</p>
+      </div>
+
+      <div class="polaroid" onclick="openModal('images/photo5.jpg', 'Caption 5')">
+        <div class="tape"></div>
+        <img src="images/photo5.jpg" alt="Memory 5">
+        <p class="caption">Caption 5</p>
+      </div>
+
+      <div class="polaroid" onclick="openModal('images/photo6.jpg', 'Caption 6')">
+        <div class="tape"></div>
+        <img src="images/photo6.jpg" alt="Memory 6">
+        <p class="caption">Caption 6</p>
+      </div>
+
+      <div class="polaroid" onclick="openModal('images/photo7.jpg', 'Caption 7')">
+        <div class="tape"></div>
+        <img src="images/photo4.jpg" alt="Memory 7">
+        <p class="caption">Caption 7</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Letter -->
+  <section class="letter-container">
+    <div class="letter">
+      <h2>To My Favorite Person</h2>
+      <p>Write your first paragraph here...</p>
+      <p>Write your second paragraph here...</p>
+      <p>Write your closing paragraph here...</p>
+      <p class="signature">Forever yours, [Your Name]</p>
+    </div>
+  </section>
+
+  <!-- Image modal -->
+  <div class="modal" id="image-modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="">
+      <p class="modal-caption" id="modal-caption"></p>
+    </div>
+  </div>
+
+  <!-- Background music (add your file as music.mp3) -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Confetti library (your script.js uses this) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
